@@ -48,6 +48,21 @@ export default class WebViewContainer extends Component<{}> {
     );
   }
 
+  render() {
+    return (
+      <View style={styles.container}>
+        <WebView
+          source={{uri: 'https://www.leasingrechnen.at'}}
+          style={styles.webView}
+          domStorageEnabled={true}
+          javaScriptEnabled={true}
+          mixedContentMode={constants.enableMixedContentMode ? 'compatibility' : 'never'}
+          userAgent={constants.userAgent + constants.userAgentPostfix}
+        />
+      </View>
+    );
+  }
+
 /**
 Maybe useful:
 
@@ -82,19 +97,4 @@ dataDetectorTypes?: (iOS)
 Determines the types of data converted to clickable URLs in the web view’s content.
 By default only phone numbers are detected. You can provide one type or an array of many types.
 */
-
-  render() {
-    return (
-      <View style={styles.container}>
-        <WebView
-          source={{uri: 'https://www.leasingrechnen.at'}}
-          style={styles.webView}
-          domStorageEnabled={true}
-          javaScriptEnabled={true}
-          mixedContentMode={constants.enableMixedContentMode ? 'compatibility' : 'never'}
-          userAgent={constants.userAgent + constants.userAgentPostfix}
-        />
-      </View>
-    );
-  }
 }

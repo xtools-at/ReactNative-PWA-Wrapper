@@ -1,8 +1,7 @@
 /**
  * App Constants and Settings
  */
-
-export default const constants = {
+const constants = {
   colors: {
     primary: '#dc143c',
   },
@@ -10,3 +9,5 @@ export default const constants = {
   postfix: 'ReactNativeApp',
   enableMixedContentMode: true,
 };
+
+export default constants;
