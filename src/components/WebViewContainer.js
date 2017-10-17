@@ -21,7 +21,7 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-export default class WebView extends Component<{}> {
+export default class WebViewContainer extends Component<{}> {
   renderOfflineWidget() {
     return (
       <View style={styles.welcome}>
@@ -93,7 +93,6 @@ By default only phone numbers are detected. You can provide one type or an array
           javaScriptEnabled={true}
           mixedContentMode={constants.enableMixedContentMode ? 'compatibility' : 'never'}
           userAgent={constants.userAgent + constants.userAgentPostfix}
-          onShouldStartLoadWithRequest={}
         />
       </View>
     );

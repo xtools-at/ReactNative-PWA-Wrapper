@@ -3,12 +3,12 @@
  */
 
 import React, { Component } from 'react';
-import WebView from './WebView';
+import WebViewContainer from './WebViewContainer';
 
 export default class Main extends Component<{}> {
   render() {
     return (
-      <WebView />
+      <WebViewContainer />
     );
   }
 }
