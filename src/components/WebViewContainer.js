@@ -24,14 +24,14 @@ const instructions = Platform.select({
 export default class WebViewContainer extends Component<{}> {
   renderOfflineWidget() {
     return (
-      <View style={styles.welcome}>
-        <Text style={styles.welcome}>
+      <View style={styles().welcome}>
+        <Text style={styles().welcome}>
           Welcome to React Native!
         </Text>
-        <Text style={styles.instructions}>
+        <Text style={styles().instructions}>
           To get started, edit App.js
         </Text>
-        <Text style={styles.instructions}>
+        <Text style={styles().instructions}>
           {instructions}
         </Text>
       </View>
@@ -50,10 +50,10 @@ export default class WebViewContainer extends Component<{}> {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles().container}>
         <WebView
           source={{uri: 'https://www.leasingrechnen.at'}}
-          style={styles.webView}
+          style={styles().webView}
           domStorageEnabled={true}
           javaScriptEnabled={true}
           mixedContentMode={constants.enableMixedContentMode ? 'compatibility' : 'never'}
